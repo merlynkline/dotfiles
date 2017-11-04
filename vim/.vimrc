@@ -102,8 +102,12 @@ Plug 'tpope/vim-abolish'
 " Automatically save sessions
 Plug 'powerman/vim-plugin-autosess'
 
+" Perl syntax highlighting
+Plug 'vim-perl/vim-perl', {'for': 'perl', 'do': 'make clean carp highlight-all-pragmas moose test-more try-tiny heredoc-sql'}
+
 call plug#end()
 "-----------------------------------------------
 
 " Dark comments
-hi Comment ctermfg=DarkGrey guifg=DarkGrey
+hi Comment ctermfg=240
+
