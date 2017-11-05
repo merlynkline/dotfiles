@@ -57,12 +57,15 @@ set tabpagemax=50 " Max tabs
 nnoremap [D :tabprevious<CR>
 nnoremap [C :tabnext<cr>
 
-"Use F2 to toggle and show 'paste' mode (no auto-indent etc)..."
-"...in normal mode..."
+" Use F2 to toggle and show 'paste' mode (no auto-indent etc)...
+" ...in normal mode...
 nnoremap <F2> :set invpaste paste?<CR>
-"...and in edit mode"
+" ...and in edit mode
 set pastetoggle=<F2>
 set noshowmode
+
+" Use F2 to open the filename under the curosr in a new tab
+nnoremap <F3> <C-W>gf
 
 " Start file edits at same cursor position as last edit"
 function! ResCur()
