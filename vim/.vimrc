@@ -114,3 +114,8 @@ call plug#end()
 " Dark comments
 hi Comment ctermfg=240
 
+" Source a local configuration file for the cwd if available
+if filereadable("vimrc.thisdir")
+  source vimrc.thisdir
+endif
+
