@@ -106,7 +106,10 @@ Plug 'tpope/vim-abolish'
 Plug 'powerman/vim-plugin-autosess'
 
 " Perl syntax highlighting
-Plug 'vim-perl/vim-perl', {'for': 'perl', 'do': 'make clean carp highlight-all-pragmas moose test-more try-tiny heredoc-sql'}
+Plug 'vim-perl/vim-perl', {'branch': 'dev', 'for': 'perl', 'do': 'make clean carp highlight-all-pragmas moose test-more try-tiny heredoc-sql'}
+
+" Additional text objects
+Plug 'wellle/targets.vim'
 
 call plug#end()
 "-----------------------------------------------
