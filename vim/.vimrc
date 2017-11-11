@@ -83,11 +83,19 @@ augroup END
 au BufRead,BufNewFile *.pm,*.pl syn match psub /^\s*sub\s.*/
 au BufRead,BufNewFile *.pm,*.pl hi psub cterm=underline
 
+" Configure persistent undo
 if has("persistent_undo")
     set undodir=~/.vim/undodir/
-    silent execute '!mkdir -p "' . &undodir .'"'
+    silent execute '!mkdir -p "' . &undodir . '"'
     set undofile
 endif
+
+" Configure undotree
+let g:undotree_ShortIndicators = 1
+let g:undotree_WindowLayout = 2
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_HelpLine = 1
+nnoremap <F5> :UndotreeToggle<cr>
 
 "-----------------------------------------------
 " Plugins with vim-plug
@@ -111,6 +119,9 @@ Plug 'vim-perl/vim-perl', {'branch': 'dev', 'for': 'perl', 'do': 'make clean car
 
 " Additional text objects
 Plug 'wellle/targets.vim'
+
+" Display and navigate complete undo history
+Plug 'mbbill/undotree'
 
 call plug#end()
 "-----------------------------------------------
