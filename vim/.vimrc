@@ -85,6 +85,7 @@ au BufRead,BufNewFile *.pm,*.pl hi psub cterm=underline
 
 if has("persistent_undo")
     set undodir=~/.vim/undodir/
+    silent execute '!mkdir -p "' . &undodir .'"'
     set undofile
 endif
 
