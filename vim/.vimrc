@@ -8,7 +8,7 @@ endif
 set background=dark
 
 " Remember various things between edits
-set viminfo='10,\"1000,:20,%,n~/.viminfo
+set viminfo='10,\"1000,:20,n~/.viminfo
 
 " Highlight search matches
 set hlsearch
@@ -97,6 +97,9 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_HelpLine = 1
 nnoremap <F5> :UndotreeToggle<cr>
 
+" Configure CtrlP file finder
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 "-----------------------------------------------
 " Plugins with vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -122,6 +125,9 @@ Plug 'wellle/targets.vim'
 
 " Display and navigate complete undo history
 Plug 'mbbill/undotree'
+
+" Fuzzy file (etc) finder
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 "-----------------------------------------------
