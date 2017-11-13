@@ -129,6 +129,9 @@ Plug 'mbbill/undotree'
 " Fuzzy file (etc) finder
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Change surrounding characters
+Plug 'tpope/vim-surround'
+
 call plug#end()
 "-----------------------------------------------
 
