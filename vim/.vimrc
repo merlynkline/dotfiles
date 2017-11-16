@@ -132,6 +132,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Change surrounding characters
 Plug 'tpope/vim-surround'
 
+" Extend the repeat command (.) to work for some plugins
+Plug 'tpope/vim-repeat'
+
 call plug#end()
 "-----------------------------------------------
 
