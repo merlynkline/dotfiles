@@ -139,7 +139,13 @@ call plug#end()
 "-----------------------------------------------
 
 " Dark comments
-hi Comment ctermfg=240
+hi Comment ctermfg=241
+
+" Cursor line colour control
+set cursorline
+hi CursorLine ctermbg=17 cterm=none
+autocmd InsertEnter * highlight CursorLine ctermbg=235
+autocmd InsertLeave * highlight CursorLine ctermbg=17
 
 " Source a local configuration file for the cwd if available
 if filereadable("vimrc.thisdir")
