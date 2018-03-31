@@ -64,7 +64,7 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set noshowmode
 
-" Use F2 to open the filename under the curosr in a new tab
+" Use F3 to open the filename under the cursor in a new tab
 nnoremap <F3> <C-W>gf
 
 " Start file edits at same cursor position as last edit"
@@ -118,7 +118,7 @@ Plug 'tpope/vim-abolish'
 Plug 'powerman/vim-plugin-autosess'
 
 " Perl syntax highlighting
-Plug 'vim-perl/vim-perl', {'branch': 'dev', 'for': 'perl', 'do': 'make clean carp highlight-all-pragmas moose test-more try-tiny heredoc-sql'}
+" Disabled owing to poor performance:  Plug 'vim-perl/vim-perl', {'branch': 'dev', 'for': 'perl', 'do': 'make clean carp highlight-all-pragmas moose test-more try-tiny heredoc-sql'}
 
 " Additional text objects
 Plug 'wellle/targets.vim'
