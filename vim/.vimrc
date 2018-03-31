@@ -101,7 +101,7 @@ nnoremap <F5> :UndotreeToggle<cr>
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 "-----------------------------------------------
-" Plugins with vim-plug
+" Plugins with vim-plug - use the PlugUpdate command after adding new ones
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
@@ -134,6 +134,10 @@ Plug 'tpope/vim-surround'
 
 " Extend the repeat command (.) to work for some plugins
 Plug 'tpope/vim-repeat'
+
+" Asynchronous linter for syntax checking
+Plug 'w0rp/ale'
+let g:ale_linters = {'perl': ['perl']}
 
 call plug#end()
 "-----------------------------------------------
