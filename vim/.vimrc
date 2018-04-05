@@ -138,6 +138,8 @@ Plug 'tpope/vim-repeat'
 " Asynchronous linter for syntax checking
 Plug 'w0rp/ale'
 let g:ale_linters = {'perl': ['perl']}
+nmap <silent> <leader>aj :ALENextWrap<cr>
+nmap <silent> <leader>ak :ALEPreviousWrap<cr>
 
 call plug#end()
 "-----------------------------------------------
